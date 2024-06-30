@@ -1,0 +1,14 @@
+
+{
+    "builds": [{
+        "src": "SIR601/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "50mb", "runtime": "python3.9" }
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "SIR601/wsgi.py"
+        }
+    ]
+}
